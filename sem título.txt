@@ -1,0 +1,76 @@
+// Questao 1
+function somarArray(array) {
+  return array.reduce((total, num) => total + num, 0);
+}
+
+console.log(somarArray([1, 2, 3, 4, 9]));
+
+// Questão 2
+function numeroPrimo(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+console.log(numeroPrimo(7)); 
+
+// Questão 3
+function contarVogais(str) {
+  const vogais = 'aeiouAEIOU';
+  return str.split('').filter(char => vogais.includes(char)).length;
+}
+
+console.log(contarVogais('javascript'));
+
+// Questão 4 
+function inverterString(str) {
+  return str.split('').reverse().join('');
+}
+
+console.log(inverterString('hello'));
+
+//Questão 5
+function fatorial(num) {
+  if (num === 0 || num === 1) return 1;
+  return num * fatorial(num - 1);
+}
+
+console.log(fatorial(5)); 
+
+//Questão 6
+function maiorNumero(num) {
+  return Math.max(...num);
+}
+
+console.log(maiorNumero([10, 5, 8, 20, 3])); 
+
+//Questão 7
+function palindromo(str) {
+  const reversed = str.split('').reverse().join('');
+  return str === reversed;
+}
+
+console.log(palindromo('radar')); 
+
+//Questão 8 
+function ordenarArray(array) {
+  return array.sort((a, b) => a - b);
+}
+
+console.log(ordenarArray([3, 1, 4, 2, 5])); 
+
+//Questão 9
+function contarOcorrencias(str, char) {
+  return str.split('').filter(c => c === char).length;
+}
+
+console.log(contarOcorrencias('javascript', 'a')); 
+
+//Questão 10
+function mediaArray(arr) {
+  return arr.reduce((total, num) => total + num, 0) / arr.length;
+}
+
+console.log(mediaArray([1, 2, 3, 4, 5])); 
